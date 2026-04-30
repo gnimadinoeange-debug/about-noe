@@ -58,14 +58,18 @@ buttons.forEach(button => {
 // ============================================
 // 3. NAVIGATION MOBILE
 // ============================================
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
+        if (hamburger) {
+            hamburger.classList.remove('active');
+        }
         navMenu.classList.remove('active');
     });
 });
@@ -146,9 +150,18 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const formData = new FormData(contactForm);
         const button = contactForm.querySelector('button');
         const originalText = button.textContent;
+        
+        // Validation simple
+        const name = contactForm.querySelector('input[name="name"]').value;
+        const email = contactForm.querySelector('input[name="email"]').value;
+        const message = contactForm.querySelector('textarea[name="message"]').value;
+        
+        if (!name || !email || !message) {
+            alert('Veuillez remplir tous les champs');
+            return;
+        }
         
         // Animation du bouton
         button.textContent = 'Envoi en cours...';
@@ -250,16 +263,13 @@ style.innerHTML = `
         }
     }
 
-    .btn:active {
-        transform: scale(0.98);
-    }
-
-    .nav-link.active {
-        color: var(--primary);
-    }
-
-    .nav-link.active::after {
-        width: 100%;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 `;
 document.head.appendChild(style);
@@ -318,7 +328,7 @@ document.addEventListener('click', (e) => {
 });
 
 function createRipple(event) {
-    const button = event.currentTarget;
+    const button = event.target;
     const ripple = document.createElement('span');
     
     const rect = button.getBoundingClientRect();
@@ -338,7 +348,7 @@ function createRipple(event) {
 
 function createParticles(event) {
     const particleCount = 8;
-    const button = event.currentTarget;
+    const button = event.target;
     const rect = button.getBoundingClientRect();
     
     for (let i = 0; i < particleCount; i++) {
@@ -360,38 +370,6 @@ function createParticles(event) {
         setTimeout(() => particle.remove(), 1000);
     }
 }
-
-// Style pour les particules
-const particleStyle = document.createElement('style');
-particleStyle.innerHTML = `
-    .particle {
-        position: fixed;
-        width: 8px;
-        height: 8px;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        animation: particleFloat 1s ease-out forwards;
-    }
-
-    .ripple {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.6);
-        transform: scale(0);
-        animation: ripple-animation 0.6s ease-out;
-        pointer-events: none;
-    }
-
-    @keyframes ripple-animation {
-        to {
-            transform: scale(4);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(particleStyle);
 
 // ============================================
 // 14. EFFET HOVER SUR LES CARTES DE CONTACT
@@ -428,22 +406,11 @@ window.addEventListener('load', () => {
     document.body.style.animation = 'fadeIn 0.5s ease-out';
     
     // Initialiser les animations des éléments visibles
-    observer.observe(document.querySelector('.hero'));
-});
-
-// Animation de fade in
-const fadeInStyle = document.createElement('style');
-fadeInStyle.innerHTML = `
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        observer.observe(hero);
     }
-`;
-document.head.appendChild(fadeInStyle);
+});
 
 // ============================================
 // 17. EFFET DE GLOW SUR LES INPUTS
