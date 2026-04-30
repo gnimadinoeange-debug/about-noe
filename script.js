@@ -492,4 +492,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-console.log('🚀 Portfolio ultra-sophistiqué chargé avec interactions curseur avancées!');
+console.log('Portfolio ultra-sophistiqué chargé avec interactions curseur avancées!');
