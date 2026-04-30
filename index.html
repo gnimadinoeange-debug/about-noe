@@ -5,44 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Isidor Ange Noé GNIMADI</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow"></div>
+    
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="logo">IGN<span>.</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#experience">Expériences</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">IGN</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="#story" class="nav-link">Mon Histoire</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">À propos</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Expériences</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Compétences</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with 3D -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="hero-container">
             <div class="hero-content">
-                <h4 class="reveal">Bonjour, je suis</h4>
-                <h1 class="reveal">Isidor Ange Noé <span>GNIMADI</span></h1>
-                <p class="reveal">Agent Commercial & Expert en Bureautique. Passionné par la relation client et les solutions technologiques.</p>
-                <div class="hero-btns reveal">
-                    <a href="#contact" class="btn btn-primary">Me contacter</a>
-                    <a href="#experience" class="btn btn-outline">Voir mon parcours</a>
+                <div class="hero-text">
+                    <h4 class="hero-subtitle">Bienvenue</h4>
+                    <h1 class="hero-title">
+                        <span class="word" data-word="Isidor">Isidor</span>
+                        <span class="word" data-word="Ange">Ange</span>
+                        <span class="word" data-word="Noé">Noé</span>
+                        <span class="word" data-word="GNIMADI">GNIMADI</span>
+                    </h1>
+                    <p class="hero-description">Agent Commercial | Expert Bureautique | Web Designer</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Commencer</a>
+                        <a href="#story" class="btn btn-secondary">Découvrir mon histoire</a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image reveal">
-                <div class="img-box">
-                    <img src="noe.jpeg" alt="Isidor Ange Noé GNIMADI">
+            <div class="hero-image-container">
+                <div class="image-wrapper">
+                    <div class="image-card">
+                        <img src="profile.jpg" alt="Isidor Ange Noé GNIMADI">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="story">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Mon Histoire</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="story-content">
+                <div class="story-card">
+                    <div class="story-text">
+                        <p class="story-paragraph">
+                            Mon parcours a commencé dans un domaine technique, avec une formation en <strong>électrotechnique</strong> et, plus tard en tant qu'<strong>agent commercial à Moov Africa et Yobou Market</strong>. Cette base m'a appris la <strong>rigueur, la logique et le sens du détail</strong>.
+                        </p>
+                        <p class="story-paragraph">
+                            En travaillant au sein de ces agences commerciales, j'ai vu à quel point une <strong>présence en ligne bien pensée peut tout changer</strong> : plus de visibilité, plus de crédibilité, plus d'opportunité.
+                        </p>
+                        <p class="story-paragraph highlight">
+                            Aujourd'hui une présence en ligne claire et bien pensée peut transformer une activité. C'est ce déclic qui m'a poussé à me lancer sérieusement dans le <strong>webdesign</strong>.
+                        </p>
+                        <p class="story-paragraph">
+                            Mon objectif est clair : <strong>aider les professionnels, les commerçants, les travailleurs indépendants, etc… qui n'ont pas toujours les moyens techniques à exister en ligne avec force</strong>.
+                        </p>
+                    </div>
+                    <div class="story-visual">
+                        <div class="story-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,104 +107,160 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>À Propos de Moi</h2>
-                <div class="underline"></div>
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">À Propos</h2>
+                <div class="title-underline"></div>
             </div>
             <div class="about-content">
-                <div class="about-text">
-                    <p>Professionnel dynamique basé à Abomey-Calavi, je possède une solide expérience dans le domaine commercial et une maîtrise avancée des outils de bureautique et de graphisme.</p>
-                    <div class="personal-info">
-                        <div class="info-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>Né le 13 Février 2000</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Abomey-Calavi, Atlantique</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>gnimadinoe13@gmail.com</span>
-                        </div>
+                <div class="about-card">
+                    <div class="about-text">
+                        <p>Professionnel dynamique et passionné, basé à Abomey-Calavi, avec une expérience solide en gestion commerciale et une maîtrise avancée des technologies modernes.</p>
+                        <p>Mon parcours professionnel chez MTN, Sbin et Moov Africa m'a permis de développer des compétences exceptionnelles en relation client et en solutions technologiques.</p>
+                    </div>
+                </div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-birthday-cake"></i>
+                        <h3>Date de Naissance</h3>
+                        <p>13 Février 2000</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Localisation</h3>
+                        <p>Abomey-Calavi, Atlantique</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Téléphone</h3>
+                        <p>+229 43 48 11 43</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>gnimadinoe13@gmail.com</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience Section with 3D Timeline -->
     <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-title">
-                <h2>Expériences Professionnelles</h2>
-                <div class="underline"></div>
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Parcours Professionnel</h2>
+                <div class="title-underline"></div>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021 - 2026</div>
+            <div class="timeline-container">
+                <div class="timeline-item" data-year="2021-2026">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Agent Commercial</h3>
-                        <h4>MTN Bénin</h4>
-                        <p>Gestion de la relation client, promotion des services et produits de télécommunication.</p>
+                        <div class="timeline-card">
+                            <span class="timeline-year">2021 - 2026</span>
+                            <h3>Agent Commercial</h3>
+                            <h4>MTN Bénin</h4>
+                            <p>Gestion de la relation client, promotion des services et produits de télécommunication. Développement du portefeuille client et atteinte des objectifs commerciaux.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025 - 2026</div>
+                <div class="timeline-item" data-year="2025-2026">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Agent Commercial</h3>
-                        <h4>Sbin</h4>
-                        <p>Développement du portefeuille client et conseil sur les solutions de connectivité.</p>
+                        <div class="timeline-card">
+                            <span class="timeline-year">2025 - 2026</span>
+                            <h3>Agent Commercial</h3>
+                            <h4>Sbin</h4>
+                            <p>Développement du portefeuille client et conseil sur les solutions de connectivité. Suivi et satisfaction client.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2023 - 2025</div>
+                <div class="timeline-item" data-year="2023-2025">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Agent Commercial</h3>
-                        <h4>Moov Africa</h4>
-                        <p>Vente directe et accompagnement des clients dans leurs besoins quotidiens.</p>
+                        <div class="timeline-card">
+                            <span class="timeline-year">2023 - 2025</span>
+                            <h3>Agent Commercial</h3>
+                            <h4>Moov Africa</h4>
+                            <p>Vente directe et accompagnement des clients dans leurs besoins quotidiens. Gestion des réclamations et fidélisation.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section with 3D Cards -->
     <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>Mes Compétences</h2>
-                <div class="underline"></div>
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Compétences</h2>
+                <div class="title-underline"></div>
             </div>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fab fa-microsoft"></i>
-                    <h3>Bureautique</h3>
-                    <ul>
-                        <li>Word (Avancé)</li>
-                        <li>Excel (Avancé)</li>
-                        <li>Outlook (Avancé)</li>
-                        <li>PowerPoint (Avancé)</li>
-                    </ul>
+                <div class="skill-card-3d">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <i class="fas fa-file-word"></i>
+                            <h3>Bureautique</h3>
+                        </div>
+                        <div class="skill-card-back">
+                            <ul>
+                                <li>Word (Avancé)</li>
+                                <li>Excel (Avancé)</li>
+                                <li>Outlook (Avancé)</li>
+                                <li>PowerPoint (Avancé)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-palette"></i>
-                    <h3>Graphisme</h3>
-                    <ul>
-                        <li>Adobe InDesign (Avancé)</li>
-                    </ul>
+                <div class="skill-card-3d">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <i class="fas fa-palette"></i>
+                            <h3>Graphisme</h3>
+                        </div>
+                        <div class="skill-card-back">
+                            <ul>
+                                <li>Adobe InDesign</li>
+                                <li>Design Graphique</li>
+                                <li>Mise en page</li>
+                                <li>Branding</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Formation</h3>
-                    <ul>
-                        <li>Série F3 : Electrotechnique</li>
-                        <li>Learnio Freelancing</li>
-                    </ul>
+                <div class="skill-card-3d">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Formation</h3>
+                        </div>
+                        <div class="skill-card-back">
+                            <ul>
+                                <li>BAC F3 Électrotechnique</li>
+                                <li>Learnio Freelancing</li>
+                                <li>Certificat Professionnel</li>
+                                <li>Compétences Commerciales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card-3d">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <i class="fas fa-code"></i>
+                            <h3>Web Design</h3>
+                        </div>
+                        <div class="skill-card-back">
+                            <ul>
+                                <li>HTML/CSS/JS</li>
+                                <li>Responsive Design</li>
+                                <li>UX/UI Design</li>
+                                <li>Web Animation</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,40 +268,60 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contactez-moi</h2>
-                <div class="underline"></div>
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Contactez-moi</h2>
+                <div class="title-underline"></div>
             </div>
-            <div class="contact-container">
+            <div class="contact-wrapper">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
                         <div>
                             <h3>Téléphone</h3>
                             <p>+229 43 48 11 43</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
                         <div>
                             <h3>Email</h3>
                             <p>gnimadinoe13@gmail.com</p>
                         </div>
                     </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>Abomey-Calavi, Atlantique</p>
+                        </div>
+                    </div>
                 </div>
                 <form class="contact-form">
-                    <input type="text" placeholder="Votre Nom" required>
-                    <input type="email" placeholder="Votre Email" required>
-                    <textarea placeholder="Votre Message" rows="5" required></textarea>
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre Message" rows="5" required></textarea>
+                    </div>
                     <button type="submit" class="btn btn-primary">Envoyer</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
             <p>&copy; 2026 Isidor Ange Noé GNIMADI. Tous droits réservés.</p>
         </div>
     </footer>
